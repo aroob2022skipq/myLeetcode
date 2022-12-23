@@ -5,10 +5,11 @@
 var maximumWealth = function (accounts) {
   let result = [];
   for (let i = 0; i < accounts.length; i++) {
-    let sum = 0;
-    for (let j = 0; j < accounts[i].length; j++) {
-      sum = sum + accounts[i][j];
-    }
+    // let sum = 0;
+    // for (let j = 0; j < accounts[i].length; j++) {
+    //   sum = sum + accounts[i][j];
+    // }
+    let sum = accounts[i].reduce((x, y) => x + y, 0);
     result.push(sum);
   }
   return Math.max(...result);
@@ -20,3 +21,7 @@ console.log(
     [3, 2, 1],
   ])
 );
+
+// let arr = [1, 1, 1, 1];
+// const sum = arr.reduce((x, y) => x + y, 0);
+// console.log(sum);
