@@ -3,7 +3,8 @@ var decodeMessage = function (key, message) {
   let char = 97;
   const keyString = key.replace(/\s/g, "").split("");
 
-  // console.log(keyString);
+  console.log(keyString);
+  console.log(obj);
 
   for (let i = 0; i < keyString.length; i++) {
     if (!obj[keyString[i]]) {
@@ -11,6 +12,7 @@ var decodeMessage = function (key, message) {
       char++;
     }
   }
+  console.log(obj);
   let decodedMessage = [];
 
   // const keys = Object.keys(obj);
